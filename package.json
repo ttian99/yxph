@@ -1,0 +1,87 @@
+{
+  "name": "yxph",
+  "version": "1.0.0",
+  "description": "for yxph",
+  "main": "main.js",
+  "scripts": {
+    "deploy": "webpack --progress --colors --profile --config webpack.prod.config.babel.js",
+    "dev": "webpack --progress --colors",
+    "dev:watch": "npm run dev -- -w",
+    "test": "jest --noStackTrace -b",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
+    "svr:dev": "babel-node server/server.js -c dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ttian99/yxph.git"
+  },
+  "keywords": [
+    "yxph"
+  ],
+  "author": "ltc",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-eslint": "^5.0.0-beta4",
+    "babel-jest": "^5.3.0",
+    "babel-loader": "^5.4.0",
+    "babel-polyfill": "^6.0.16",
+    "babel-runtime": "^5.8.34",
+    "better-console": "^0.2.4",
+    "bunyan": "^1.5.1",
+    "colors": "^1.1.2",
+    "compression": "^1.6.0",
+    "core-decorators": "^0.9.1",
+    "cors": "^2.7.1",
+    "del": "^2.1.0",
+    "dotenv-safe": "^2.0.0",
+    "embed-particle": "0.0.3",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^1.0.2",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.11.2",
+    "express": "^4.13.3",
+    "fs-extra": "^0.26.2",
+    "fs-extra-promise-es6": "0.0.1",
+    "glob-all": "^3.0.1",
+    "gulp": "^3.9.0",
+    "gulp-git": "^1.7.0",
+    "gulp-zip": "^3.2.0",
+    "hash-rename-file": "0.0.3",
+    "iconv-lite": "^0.4.13",
+    "jest-cli": "^0.8.0",
+    "jimp": "^0.2.21",
+    "lossy-imagemin": "0.0.3",
+    "morgan": "^1.6.1",
+    "node-promise-es6": "^0.2.3",
+    "opener": "^1.4.1",
+    "plist": "^1.2.0",
+    "qrcode-terminal": "^0.10.0",
+    "rewire": "^2.5.0",
+    "scale-fnt": "0.0.5",
+    "serve-favicon": "^2.3.0",
+    "tp-helper": "0.0.4",
+    "webpack": "^1.12.6"
+  },
+  "dependencies": {
+    "immutable": "^3.7.5",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
+    "redux": "^3.0.4",
+    "redux-logger": "^2.0.4",
+    "redux-thunk": "^1.0.0",
+    "underscore.string": "^3.2.2"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/immutable"
+    ],
+    "globals": {
+      "cc": false,
+      "bows": false,
+      "LTC": false
+    }
+  }
+}
