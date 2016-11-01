@@ -1,0 +1,6 @@
+[submodule "gulp-tasks"]
+	path = gulp-tasks
+	url = https://github.com/ttian99/gulp-tasks.git
+[submodule "lib/svr-client-cfg"]
+	path = lib/svr-client-cfg
+	url = https://github.com/ttian99/svr-client-cfg.git
